@@ -29,7 +29,7 @@ $(document).ready(function ()
         valOfWalls++
         wallsCounter.val(valOfWalls);
         console.log("hith");
-        if (valOfWalls >= 4)
+        if (valOfWalls >= 12)
         {
             $(".waller").off("click");
             $(".waller").css("cursor", "unset");
@@ -60,7 +60,7 @@ $(document).ready(function ()
 
       valOfStalls++;
       stallsCounter.val(valOfStalls);
-      if (valOfStalls >= 4) {
+      if (valOfStalls >= 12) {
         $(".staller").off("click");
           $(".staller").css("cursor", "unset");
           $(".staller").hide();
@@ -88,14 +88,10 @@ $(document).ready(function ()
 
       valOfstealler++;
       steallerCounter.val(valOfstealler);
-      if (valOfstealler >= 1) {
+      if (valOfstealler >= 12) {
         $(".stealler").off("click");
         $(".stealler").css("cursor", "unset");
-        $(".stealler").hide();
-        clickedWall.show();
-          
-          
-        
+        //$(".stealler").hide();
       }
     }
 
