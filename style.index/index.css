@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+.headline {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.play-now-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}/*# sourceMappingURL=index.css.map */
