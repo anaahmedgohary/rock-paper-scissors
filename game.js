@@ -9,7 +9,7 @@ $(document).ready(function ()
     let wallsCounter = $("#wallsCounter");
     let valOfWalls = 0
 
-    
+  // var sqr01 = document.getElementById("identifier01").value;
 
 
 
@@ -17,9 +17,9 @@ $(document).ready(function ()
       let clickedWall = $(e.target);
         let squareInPlay = clickedWall.parent();
         let staller = squareInPlay.find(".staller");
-        let stealler = squareInPlay.find(".stealler");
+        let scissors = squareInPlay.find(".scissors");
         staller.hide();
-        stealler.hide();
+        scissors.hide();
         clickedWall.off("click");
         clickedWall.css("cursor", "unset");
 
@@ -27,8 +27,10 @@ $(document).ready(function ()
         clickedWall.addClass("wallKeepers");
 
         valOfWalls++
-        wallsCounter.val(valOfWalls);
-        console.log("hith");
+      wallsCounter.val(valOfWalls);
+
+      //sqr01 = 1;
+      
         if (valOfWalls >= 12)
         {
             $(".waller").off("click");
@@ -49,9 +51,9 @@ $(document).ready(function ()
       let clickedWall = $(e.target);
       let squareInPlay = clickedWall.parent();
       let staller = squareInPlay.find(".waller");
-      let stealler = squareInPlay.find(".stealler");
+      let scissors = squareInPlay.find(".scissors");
       staller.hide();
-      stealler.hide();
+      scissors.hide();
       clickedWall.off("click");
         clickedWall.css("cursor", "unset");
         
@@ -60,6 +62,9 @@ $(document).ready(function ()
 
       valOfStalls++;
       stallsCounter.val(valOfStalls);
+
+      //sqr01 = 2;
+
       if (valOfStalls >= 12) {
         $(".staller").off("click");
           $(".staller").css("cursor", "unset");
@@ -70,32 +75,62 @@ $(document).ready(function ()
     }
 
 
-    $(".stealler").on("click", placestealler);
-    let steallerCounter = $("#steallerCounter");
-    let valOfstealler = 0;
+    $(".scissors").on("click", placescissors);
+    let scissorsCounter = $("#scissorsCounter");
+    let valOfscissors = 0;
 
-    function placestealler(e) {
+    function placescissors(e) {
       let clickedWall = $(e.target);
       let squareInPlay = clickedWall.parent();
       let staller = squareInPlay.find(".waller");
-      let stealler = squareInPlay.find(".staller");
+      let scissors = squareInPlay.find(".staller");
       staller.hide();
-      stealler.hide();
+      scissors.hide();
       clickedWall.off("click");
       clickedWall.css("cursor", "unset");
 
         clickedWall.css("opacity", "1");
 
-      valOfstealler++;
-      steallerCounter.val(valOfstealler);
-      if (valOfstealler >= 12) {
-        $(".stealler").off("click");
-        $(".stealler").css("cursor", "unset");
-        //$(".stealler").hide();
+      valOfscissors++;
+      scissorsCounter.val(valOfscissors);
+
+      //$("#identifier01").val(3);
+      //sqr01 = 3;
+
+      if (valOfscissors >= 12) {
+        $(".scissors").off("click");
+        $(".scissors").css("cursor", "unset");
+        //$(".scissors").hide();
       }
     }
 
 
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
     
 });
 

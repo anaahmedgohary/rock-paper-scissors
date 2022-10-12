@@ -7,6 +7,8 @@ body {
     margin: 0%;
 }
 
+
+
 @mixin flexCenter {
     display: flex;
     justify-content: center;
@@ -53,7 +55,7 @@ body {
     justify-content: center;
     border: solid;
     height: 4rem;
-    pointer-events: none;
+    //pointer-events: none;
 }
 
 .pieces-list {
@@ -67,6 +69,7 @@ body {
     margin: auto;
     padding: 0;
 
+
     .piece {
         margin: auto;
         height: 100%;
@@ -79,6 +82,18 @@ body {
             width: 100%;
             max-height: 100%;
         }
+    }
+
+    #rock {
+        opacity: 1;
+    }
+
+    #paper {
+        opacity: 1;
+    }
+
+    #scissors {
+        opacity: 1;
     }
 
     .waller {
@@ -100,7 +115,7 @@ body {
         opacity: 0.5;
     }
 
-    .stealler {
+    .scissors {
         background-color: orange;
         border-radius: 8px;
         background-image: url(./images/scissors.png);
@@ -126,3 +141,32 @@ body {
         }
     }
 }
+
+
+.hidden {
+    display: none;
+}
+
+.popup-msg {
+
+    @include flexCenter();
+
+    img {
+        width: 100px;
+        background-color: white;
+    }
+
+    color: orange;
+    background-color: rgba(0, 0, 0, 0.699);
+    padding: 0%;
+    margin: 0%;
+    width: 110vw;
+    height: 120vh;
+    position: fixed;
+    z-index: 1;
+
+}
+
+// #about-scissors{
+//     display: none;
+// }

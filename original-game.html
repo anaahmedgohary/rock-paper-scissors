@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+<title>play the game rock paper scissors plus</title>
+<link rel="stylesheet" href="./style.game/game.css">
+<script defer type="text/javascript" src="./game.js"></script>
+<script defer type="text/javascript" src="./gamepage.js"></script>
+</head>
+<body class="container">
+
+    
+        <!-- popup-msg modal -->
+        <div class="popup-msg modal" id="about-rock">
+             <!-- //content modal-content -->
+            <img src="./style.game/images/granite.png" alt="rock image" />
+            <ul>
+                <li>I can beat Scissors</li>
+                <li>Paper beats me</li>
+            </ul>
+        </div>
+        <div class="popup-msg modal" id="about-paper">
+            <img src="./style.game/images/paper3.png" alt="paper image" />
+            <ul>
+                <li>I can beat Rock</li>
+                <li>Scissors beats me</li>
+            </ul>
+        </div>
+        <div class="popup-msg modal" id="about-scissors">
+            <img src="./style.game/images/scissors.png" alt="scissors image" />
+            <ul>
+                <li>I can beat Paper</li>
+                <li>Rock beats me</li>
+            </ul>
+        </div>
+    
+    <header class="header">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </header>
+    <div class="choosing-color">
+        <p>choose color</p>
+        <ul id="color-list">
+            <li class="color-option red" id="red"></li>
+            <li class="color-option green" id="green"></li>
+            <li class="color-option blue" id="blue"></li>
+            <li class="color-option yellow" id="yellow"></li>
+        </ul>
+        <input type="number" id="identifier01"  value="0" />
+        <input type="number" id="identifier02" value="0"  />
+    </div>
+    <div class="pieces-div">
+        <p>Options</p>
+        <ul class="pieces-list">
+            <li class="piece" >
+                <img id="rock" class="piece" src="./style.game/images/granite.png" alt="rock">
+            </li>
+            <li class="piece">
+                <img id="paper" class="piece" src="./style.game/images/paper3.png" alt="paper">
+            </li>
+            <li class="piece">
+                <img id="scissors" class="piece" src="./style.game/images/scissors.png" alt="scissors">
+            </li>
+
+
+            
+        </ul>
+    </div>
+    <div>
+        <label for="rock">rock</label>
+        <input type="number" name="wallsCounter" id="wallsCounter" value="0" readonly />
+        <label for="paper">paper</label>
+        <input type="number" name="stallsCounter" id="stallsCounter" value="0" readonly />
+        <label for="scissors">scissors</label>
+        <input type="number" name="scissorsCounter" id="scissorsCounter" value="0" readonly />
+    </div>
+    <div>
+        <button id="zPlayBtn">
+            Play
+        </button>
+    </div>
+    <section class="board-section">
+        <div class="board-row" id="board-row01">
+            <div class="board-col" id="board-col01">
+                <ul class="pieces-list">
+                    <li id="waller-01" class="piece waller"></li>
+                    <li class="piece staller" id="staller-01"></li>
+                    <li class="piece scissors" id="scissors-01"></li>
+                    
+                </ul>
+            </div>
+            <div class="board-col">
+                <ul class="pieces-list">
+                    <li class="piece waller"></li>
+                    <li class="piece staller"></li>
+                    <li class="piece scissors"></li>
+                </ul>
+            </div>
+            <div class="board-col">
+                <ul class="pieces-list">
+                    <li class="piece waller"></li>
+                    <li class="piece staller"></li>
+                    <li class="piece scissors"></li>
+                </ul>
+            </div>
+            <div class="board-col">
+                <ul class="pieces-list">
+                    <li class="piece waller"></li>
+                    <li class="piece staller"></li>
+                    <li class="piece scissors"></li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <!-- <div class="board-row">
+            <div class="board-col"></div>
+            <div class="board-col"></div>
+            <div class="board-col"></div>
+            <div class="board-col"></div>
+        </div> -->
+        
+        
+        <div class="board-row" id="board-row02">
+            <div class="board-col" id="board-col02">
+                <ul class="pieces-list">
+                    <li id="rock02" class="piece waller"></li>
+                    <li id="paper02" class="piece staller"></li>
+                    <li id="scissors02" class="piece scissors"></li>
+                </ul>
+            </div>
+            <div class="board-col">
+                <ul class="pieces-list">
+                    <li class="piece waller"></li>
+                    <li class="piece staller"></li>
+                    <li class="piece scissors"></li>
+                </ul>
+            </div>
+            <div class="board-col">
+                <ul class="pieces-list">
+                    <li class="piece waller"></li>
+                    <li class="piece staller"></li>
+                    <li class="piece scissors"></li>
+                </ul>
+            </div>
+            <div class="board-col">
+                <ul class="pieces-list">
+                    <li class="piece waller"></li>
+                    <li class="piece staller"></li>
+                    <li class="piece scissors"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="board-row">
+            <div class="board-col">
+                <ul class="pieces-list">
+                    <li class="piece waller"></li>
+                    <li class="piece staller"></li>
+                    <li class="piece scissors"></li>
+                </ul>
+            </div>
+            <div class="board-col">
+                <ul class="pieces-list">
+                    <li class="piece waller"></li>
+                    <li class="piece staller"></li>
+                    <li class="piece scissors"></li>
+                </ul>
+            </div>
+            <div class="board-col">
+                <ul class="pieces-list">
+                    <li class="piece waller"></li>
+                    <li class="piece staller"></li>
+                    <li class="piece scissors"></li>
+                </ul>
+            </div>
+            <div class="board-col">
+                <ul class="pieces-list">
+                    <li class="piece waller"></li>
+                    <li class="piece staller"></li>
+                    <li class="piece scissors"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="board-row">
+            <div class="board-col">
+                <ul class="pieces-list">
+                    <li class="piece waller"></li>
+                    <li class="piece staller"></li>
+                    <li class="piece scissors"></li>
+                </ul>
+            </div>
+            <div class="board-col">
+                <ul class="pieces-list">
+                    <li class="piece waller"></li>
+                    <li class="piece staller"></li>
+                    <li class="piece scissors"></li>
+                </ul>
+            </div>
+            <div class="board-col">
+                <ul class="pieces-list">
+                    <li class="piece waller"></li>
+                    <li class="piece staller"></li>
+                    <li class="piece scissors"></li>
+                </ul>
+            </div>
+            <div class="board-col">
+                <ul class="pieces-list">
+                    <li class="piece waller"></li>
+                    <li class="piece staller"></li>
+                    <li class="piece scissors"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script defer src="./play.js"></script>
+
+</body>
+</html>

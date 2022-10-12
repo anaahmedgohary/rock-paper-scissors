@@ -1,0 +1,28 @@
+document.addEventListener('keydown', (event) =>
+        {
+            var name = event.key;
+            var code = event.code;
+            if (name === 'Escape')
+            {
+                // Do nothing.
+                $(".modal").hide();
+            }
+        })
+
+
+
+
+        if (!$(".modal").css("display", "none"))
+
+
+        if ($(".modal").show())
+    {
+        $(document).on("keydown", (e) =>
+        {
+            let dakey = e.key;
+            if (dakey === "Escape")
+            {
+                $(".modal").hide();
+            }
+        })
+    }
