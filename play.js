@@ -66,61 +66,13 @@ function ready()
     function adjustscissors2(e)
     {
         sqr02 = 3
-        console.log(sqr02)
+        //console.log(sqr02)
     };
 
 
-    let playBtn = document.getElementById("zPlayBtn");
-    playBtn.addEventListener("click", results)
-
-    function results(e)
-    {
     
-        if (sqr01 === 1 && sqr02 === 1)
-        {
-            console.log("DRAW");
-            document.getElementById("whoWon").textContent = "";
-        } else if (sqr01 === 1 && sqr02 === 2)
-        {
-            console.log("sqr02 Wins !!");
-            document.getElementById("whoWon").textContent = "sqr02 Wins !!";
-        } else if (sqr01 === 1 && sqr02 === 3)
-        {
-            console.log("sqr01 Wins");
-            document.getElementById("whoWon").textContent = "";
-        }
-        else if (sqr01 === 2 && sqr02 === 1)
-        {
-            console.log("sqr01 Wins");
-            document.getElementById("whoWon").textContent = "";
-        }
-        else if (sqr01 === 2 && sqr02 === 2)
-        {
-            console.log("DRAW");
-            document.getElementById("whoWon").textContent = "";
-        }
-        else if (sqr01 === 2 && sqr02 === 3)
-        {
-            console.log("sqr02 Wins !!");
-            document.getElementById("whoWon").textContent = "";
-        }
-        else if (sqr01 === 3 && sqr02 === 1)
-        {
-            console.log("sqr02 Wins !!");
-            document.getElementById("whoWon").textContent = "";
-        }
-        else if (sqr01 === 3 && sqr02 === 2)
-        {
-            console.log("sqr01 Wins");
-            document.getElementById("whoWon").textContent = "";
-        }
-        else if (sqr01 === 3 && sqr02 === 3)
-        {
-            console.log("DRAW");
-            document.getElementById("whoWon").textContent = "";
-        }
 
-    }
+    
 
 
 

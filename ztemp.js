@@ -38,17 +38,14 @@ r02Cols.forEach(element =>
     element.querySelector(".waller").addEventListener("click", (e) =>
     {
         sqr01 = 1;
-        console.log("waller")
     });
     element.querySelector(".staller").addEventListener("click", (e) =>
     {
         sqr01 = 2;
-        console.log("staller")
     });
     element.querySelector(".scissors").addEventListener("click", (e) =>
     {
         sqr01 = 3;
-        console.log("scissors")
     });
 });
 
@@ -112,3 +109,139 @@ if (element === r02Cols[0])
     document.getElementById('tcell08').textContent = 3;
     console.log(tcell08);
 } 
+
+
+
+
+
+
+
+
+
+let playBtn = document.getElementById("zPlayBtn");
+playBtn.addEventListener("click", results)
+
+function results(e)
+{
+
+    if (sqr01 === 1 && sqr02 === 1)
+    {
+        console.log("DRAW");
+        document.getElementById("whoWon").textContent = "";
+    } else if (sqr01 === 1 && sqr02 === 2)
+    {
+        console.log("sqr02 Wins !!");
+        document.getElementById("whoWon").textContent = "sqr02 Wins !!";
+    } else if (sqr01 === 1 && sqr02 === 3)
+    {
+        console.log("sqr01 Wins");
+        document.getElementById("whoWon").textContent = "";
+    }
+    else if (sqr01 === 2 && sqr02 === 1)
+    {
+        console.log("sqr01 Wins");
+        document.getElementById("whoWon").textContent = "";
+    }
+    else if (sqr01 === 2 && sqr02 === 2)
+    {
+        console.log("DRAW");
+        document.getElementById("whoWon").textContent = "";
+    }
+    else if (sqr01 === 2 && sqr02 === 3)
+    {
+        console.log("sqr02 Wins !!");
+        document.getElementById("whoWon").textContent = "";
+    }
+    else if (sqr01 === 3 && sqr02 === 1)
+    {
+        console.log("sqr02 Wins !!");
+        document.getElementById("whoWon").textContent = "";
+    }
+    else if (sqr01 === 3 && sqr02 === 2)
+    {
+        console.log("sqr01 Wins");
+        document.getElementById("whoWon").textContent = "";
+    }
+    else if (sqr01 === 3 && sqr02 === 3)
+    {
+        console.log("DRAW");
+        document.getElementById("whoWon").textContent = "";
+    }
+}
+
+
+
+
+
+
+for (let i = 0; i < resultBlocks.length; i++)
+{
+    var resultBlock = resultBlocks[i];
+    var cellA = resultBlock.querySelector('.cell-a').textContent;
+    var cellB = resultBlock.querySelector('.cell-b').textContent;
+    //console.log(cellB);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+function results(e)
+{
+    for (let i = 0; i < resultBlocks.length; i++)
+    {
+        var resultBlock = resultBlocks[i];
+        var cellA = resultBlock.querySelector('.cell-a').textContent;
+        var cellB = resultBlock.querySelector('.cell-b').textContent;
+        //console.log(cellB);
+
+    }
+
+    console.log("res")
+    let resval = resultBlock.querySelector('.result-single').textContent;
+    //console.log(resval);
+
+    if (cellA == 1 && cellB == 1)
+    {
+        document.getElementById("whoWon").textContent = "wiiiiiiiiiii";
+        resultBlock.querySelector('.result-single').value = "DRAW"
+        console.log(resval);
+    } else if (cellA === 1 && cellB === 2)
+    {
+        resultBlock.querySelector('.result-single').value = "cellB Wins !!"
+    } else if (cellA === 1 && cellB === 3)
+    {
+        resultBlock.querySelector('.result-single').value = "cellA"
+    }
+    else if (cellA === 2 && cellB === 1)
+    {
+        resultBlock.querySelector('.result-single').value = "cellA"
+    }
+    else if (cellA === 2 && cellB === 2)
+    {
+        resultBlock.querySelector('.result-single').value = "DRAW"
+    }
+    else if (cellA === 2 && cellB === 3)
+    {
+        resultBlock.querySelector('.result-single').value = "DRAW"
+    }
+    else if (cellA === 3 && cellB === 1)
+    {
+        resultBlock.querySelector('.result-single').value = "DRAW"
+    }
+    else if (cellA === 3 && cellB === 2)
+    {
+        resultBlock.querySelector('.result-single').value = "DRAW"
+    }
+    else if (cellA === 3 && cellB === 3)
+    {
+        resultBlock.querySelector('.result-single').value = "DRAW"
+    }
+}

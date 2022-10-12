@@ -67,12 +67,21 @@
             <li class="piece">
                 <img id="scissors" class="piece" src="./style.game/images/scissors.png" alt="scissors">
             </li>
-
-
-
         </ul>
     </div>
-    <div>
+    <div class="players-div">
+        <h5>Players</h5>
+        <div>
+            <label>player 1</label>
+            <input id="playa01" type="text" placeholder="Name" />
+            
+        </div>
+        <div>
+            <label>player 2</label>
+            <input id="playa02" type="text" placeholder="Name" />
+        </div>
+    </div>
+    <div class="hidden">
         <label for="rock">rock</label>
         <input type="number" name="wallsCounter" id="wallsCounter" value="0" readonly />
         <label for="paper">paper</label>
@@ -82,41 +91,53 @@
     </div>
     <div>
         <div class="result-block">
-            <input class="result-single" type="number" id="cell01" readonly />
+            <div style="display: grid;">
+                <label>Row 1</label>
+                <input class="result-single" id="cell01" readonly />
+            </div>
             <p class="cell-a" id="tcell01"></p>
             <p class="cell-b" id="tcell02"></p>
         </div>
         <div class="result-block">
-        <input class="result-single" type="number" id="cell02" readonly />
-        <p class="cell-a" id="tcell03"></p>
-        <p class="cell-b" id="tcell04"></p>
+            <div style="display: grid;">
+                <label>Row 2</label>
+                <input class="result-single" id="cell02" readonly />
+            </div>
+            <p class="cell-a" id="tcell03"></p>
+            <p class="cell-b" id="tcell04"></p>
         </div>
         <div class="result-block">
-            <input class="result-single" type="number" id="cell03" readonly />
+            <div style="display: grid;">
+                <label>Row 3</label>
+                <input class="result-single" id="cell03" readonly />
+            </div>
             <p class="cell-a" id="tcell05"></p>
             <p class="cell-b" id="tcell06"></p>
         </div>
         <div class="result-block">
-            <input class="result-single" type="number" id="cell04" readonly />
+            <div style="display: grid;">
+                <label>Row 4</label>
+                <input class="result-single" id="cell04" readonly />
+            </div>
             <p class="cell-a" id="tcell07"></p>
             <p class="cell-b" id="tcell08"></p>
         </div>
+
         
     </div>
     <div>
-        <button id="zPlayBtn">
-            Play
+        <button id="zPlayBtn" class="btn btn-success">
+            Get Result
         </button>
-        <div><p>result</p>
-        <p id="whoWon"></p></div>
+        
     </div>
     <section class="board-section">
         <div class="board-row" id="board-row01">
             <div class="board-col">
                 <ul class="pieces-list">
                     <li id="waller-01" class="piece waller"></li>
-                    <li class="piece staller" id="staller-01"></li>
-                    <li class="piece scissors" id="scissors-01"></li>
+                    <li id="staller-01" class="piece staller"></li>
+                    <li id="scissors-01" class="piece scissors"></li>
 
                 </ul>
             </div>
@@ -142,10 +163,6 @@
                 </ul>
             </div>
         </div>
-
-
-        
-
 
         <div class="board-row" id="board-row02">
             <div class="board-col" id="board-col02">
@@ -178,14 +195,17 @@
             </div>
         </div>
         
-        
     </section>
+    <div class="row-hiders">
+        <button id="hide-row-1" class="btn btn-warning">Hide/Show player 1 row</button>
+        <button id="hide-row-2" class="btn btn-warning">Hide/Show player 2 row</button>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <script defer type="text/javascript" src="./play.js"></script>
-    <script src="./playtest.js"></script>
+    <script defer src="./playtest.js"></script>
+    <script defer src="./play2.js"></script>
 
 </body>
 
