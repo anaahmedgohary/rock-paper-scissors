@@ -50,7 +50,7 @@ function ready()
 
         list.querySelector(".waller").addEventListener("click", (e) =>
         {
-            relSqr = 1;
+            relSqr = "R";
             if (list == r01Cols[0])
             {
                 document.getElementById('tcell01').textContent = relSqr;
@@ -67,7 +67,7 @@ function ready()
         });
         list.querySelector(".staller").addEventListener("click", (e) =>
         {
-            relSqr = 2;
+            relSqr = "P";
             if (list == r01Cols[0])
             {
                 document.getElementById('tcell01').textContent = relSqr;
@@ -84,7 +84,8 @@ function ready()
         });
         list.querySelector(".scissors").addEventListener("click", (e) =>
         {
-            relSqr = 3;
+            // 3 to S
+            relSqr = "S";
             if (list == r01Cols[0])
             {
                 document.getElementById('tcell01').textContent = relSqr;
@@ -118,57 +119,58 @@ function ready()
         
         element.querySelector(".waller").addEventListener("click", (e) =>
         {
-            relSqr2 = 1;
+            relSqr2 = "R";
 
             if (element === r02Cols[0])
             {
-                tcell02 = document.getElementById('tcell02').textContent = 1;
+                tcell02 = document.getElementById('tcell02').textContent = relSqr2;
             } else if (element === r02Cols[1])
             {
-                document.getElementById('tcell04').textContent = 1;
+                document.getElementById('tcell04').textContent = relSqr2;
             } else if (element === r02Cols[2])
             {
-                document.getElementById('tcell06').textContent = 1;
+                document.getElementById('tcell06').textContent = relSqr2;
             } else if (element === r02Cols[3])
             {
-                document.getElementById('tcell08').textContent = 1;
+                document.getElementById('tcell08').textContent = relSqr2;
             } 
             
         });
         element.querySelector(".staller").addEventListener("click", (e) =>
         {
-            relSqr2 = 2;
+            relSqr2 = "P";
 
             if (element === r02Cols[0])
             {
-                tcell02 = document.getElementById('tcell02').textContent = 2;
+                tcell02 = document.getElementById('tcell02').textContent = relSqr2;
             } else if (element === r02Cols[1])
             {
-                document.getElementById('tcell04').textContent = 2;
+                document.getElementById('tcell04').textContent = relSqr2;
             } else if (element === r02Cols[2])
             {
-                document.getElementById('tcell06').textContent = 2;
+                document.getElementById('tcell06').textContent = relSqr2;
             } else if (element === r02Cols[3])
             {
-                document.getElementById('tcell08').textContent = 2;
+                document.getElementById('tcell08').textContent = relSqr2;
             } 
         });
         element.querySelector(".scissors").addEventListener("click", (e) =>
         {
-            relSqr2 = 3;
+            // 3 to S
+            relSqr2 = "S";
 
             if (element === r02Cols[0])
             {
-                tcell02 = document.getElementById('tcell02').textContent = 3;
+                tcell02 = document.getElementById('tcell02').textContent = relSqr2;
             } else if (element === r02Cols[1])
             {
-                document.getElementById('tcell04').textContent = 3;
+                document.getElementById('tcell04').textContent = relSqr2;
             } else if (element === r02Cols[2])
             {
-                document.getElementById('tcell06').textContent = 3;
+                document.getElementById('tcell06').textContent = relSqr2;
             } else if (element === r02Cols[3])
             {
-                document.getElementById('tcell08').textContent = 3;
+                document.getElementById('tcell08').textContent = relSqr2;
             } 
         });
     });
@@ -195,37 +197,37 @@ function ready()
 
             // if (element == resultBlocks[0])
             // {
-                if (cellA == 1 && cellB == 1)
+                if (cellA == "R" && cellB == "R")
                 {
                     element.querySelector('.result-single').value = "DRAW"
-                } else if (cellA == 1 && cellB == 2)
+                } else if (cellA == "R" && cellB == "P")
                 {
                     element.querySelector('.result-single').value = `${playa02} @ cellB Wins`
-                } else if (cellA == 1 && cellB == 3)
+                } else if (cellA == "R" && cellB == "S")
                 {
                     element.querySelector('.result-single').value = `${playa01} @ cellA Wins`
                 }
-                else if (cellA == 2 && cellB == 1)
+                else if (cellA == "P" && cellB == "R")
                 {
                     element.querySelector('.result-single').value = `${playa01} @ cellA Wins`
                 }
-                else if (cellA == 2 && cellB == 2)
+                else if (cellA == "P" && cellB == "P")
                 {
                     element.querySelector('.result-single').value = "DRAW"
                 }
-                else if (cellA == 2 && cellB == 3)
+                else if (cellA == "P" && cellB == "S")
                 {
                     element.querySelector('.result-single').value = `${playa02} @ cellB Wins`
                 }
-                else if (cellA == 3 && cellB == 1)
+                else if (cellA == "S" && cellB == "R")
                 {
                     element.querySelector('.result-single').value = `${playa02} @ cellB Wins`
                 }
-                else if (cellA == 3 && cellB == 2)
+                else if (cellA == "S" && cellB == "P")
                 {
                     element.querySelector('.result-single').value = `${playa01} @ cellA Wins`
                 }
-                else if (cellA == 3 && cellB == 3)
+                else if (cellA == "S" && cellB == "S")
                 {
                     element.querySelector('.result-single').value = "DRAW"
                 }
@@ -235,7 +237,23 @@ function ready()
                 // }
             // }
     
-            })
+        })
+        
+        let aCells = document.getElementsByClassName("cell-a");
+        //console.log(aCells);
+        for (cell of aCells)
+        {
+            cell.style.display = "block";
+        }
+        //aCells.style.display = "block";
+        let bCells = document.querySelectorAll(".cell-b");
+        //console.log(bCells);
+        bCells.forEach(
+            (el) =>
+            {
+                el.style.display = "block";
+            }
+        )
     
     }
     
