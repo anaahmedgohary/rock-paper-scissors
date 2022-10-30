@@ -1,0 +1,11 @@
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE `node24db`.`tora` (`id` INT NOT NULL AUTO_INCREMENT , `password` VARCHAR(255) NOT NULL , `phone` VARCHAR(255) NOT NULL , `username` VARCHAR(255) NOT NULL , `email` VARCHAR(255) NOT NULL , `date` VARCHAR(55) NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`), UNIQUE `dateof` (`date`)) ENGINE = InnoDB;
