@@ -202,14 +202,14 @@ function ready()
                     element.querySelector('.result-single').value = "DRAW"
                 } else if (cellA == "R" && cellB == "P")
                 {
-                    element.querySelector('.result-single').value = `${playa02} @ cellB Wins`
+                    element.querySelector('.result-single').value = `${playa02}` || "Player 2"
                 } else if (cellA == "R" && cellB == "S")
                 {
-                    element.querySelector('.result-single').value = `${playa01} @ cellA Wins`
+                    element.querySelector('.result-single').value = `${playa01}` || "Player 1"
                 }
                 else if (cellA == "P" && cellB == "R")
                 {
-                    element.querySelector('.result-single').value = `${playa01} @ cellA Wins`
+                    element.querySelector('.result-single').value = `${playa01}` || "Player 1"
                 }
                 else if (cellA == "P" && cellB == "P")
                 {
@@ -217,15 +217,15 @@ function ready()
                 }
                 else if (cellA == "P" && cellB == "S")
                 {
-                    element.querySelector('.result-single').value = `${playa02} @ cellB Wins`
+                    element.querySelector('.result-single').value = `${playa02}` || "Player 2"
                 }
                 else if (cellA == "S" && cellB == "R")
                 {
-                    element.querySelector('.result-single').value = `${playa02} @ cellB Wins`
+                    element.querySelector('.result-single').value = `${playa02}` || "Player 2"
                 }
                 else if (cellA == "S" && cellB == "P")
                 {
-                    element.querySelector('.result-single').value = `${playa01} @ cellA Wins`
+                    element.querySelector('.result-single').value = `${playa01}` || "Player 1"
                 }
                 else if (cellA == "S" && cellB == "S")
                 {
