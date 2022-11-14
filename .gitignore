@@ -3,6 +3,7 @@ guide files/
 .txt
 sql.txt
 .vscode/
+/randos
 
 # dotenv environment variable files
 .env

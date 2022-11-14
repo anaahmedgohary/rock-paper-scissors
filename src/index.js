@@ -3,9 +3,6 @@ const mysql = require('mysql');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
-const { Prohairesis } = require('prohairesis');
-// create new database instance
-// const database = new Prohairesis(env.database);
 
 
 
