@@ -1,7 +1,9 @@
 const express = require('express');
+const cors = require("cors");
 const mysql = require('mysql');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const path = require("path");
 
 
 
@@ -31,14 +33,16 @@ const port = process.env.port || 3002;
 
 // linking the puplic html file
 app.use(express.static('public'))
+    .use(cors())
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
+
 // handle form GET/POST request
-app.post('/add4form', async (req, res) =>
+app.post('/add4form', (req, res) =>
 {
    // res.json(req.body);
     const body = req.body;
@@ -54,7 +58,9 @@ app.post('/add4form', async (req, res) =>
         if (err) throw err;
         console.log(result);
        // res.send('input into tabel tester01 24');
-        res.sendFile(__dirname+'/public/thanks.html')
+        // res.sendFile(__dirname+'/public/thanks.html')
+        //res.sendFile('D:\Coding projects\in progress\rock paper scissors\rps\public\thanks.html')
+        res.sendFile(path.join(__dirname, '../public', 'thanks.html'));
     })
 
     // await db.execute(`
