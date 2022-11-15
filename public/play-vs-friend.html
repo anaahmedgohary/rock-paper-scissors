@@ -50,9 +50,9 @@
     </div>
 
     <header class="header">
-        <h1>Welcome To<h1>
-        <h2>RPS game</h2>
-        <ul class="list-unstyled">
+        <h1 class="text-center">Welcome To<h1>
+        <h2 class="text-center">Rock || Paper || Scissors</h2>
+        <ul class="list-unstyled border border-danger">
             
             <li></li>
             <li></li>
@@ -62,16 +62,21 @@
         </ul>
     </header>
     
-    <div class="pieces-div">
-        <ul class="pieces-list">
-            <li class="piece">
-                <img id="rock" class="piece" src="./style.game/images/granite.png" alt="rock">
+    <div class="container">
+        <h4 class="col text-center mb-4 border-bottom">Options</h4>
+
+        <ul class="row list-unstyled">
+            <li class="col col-4 text-center">
+                <label class="text-center border" for="">I'm Rock</label>
+                <img id="rock" class="img-thumbnail" src="./style.game/images/granite.png" alt="rock">
             </li>
-            <li class="piece">
-                <img id="paper" class="piece" src="./style.game/images/paper3.png" alt="paper">
+            <li class="col col-4 text-center">
+                <label class="text-center border" for="">I'm Paper</label>
+                <img id="paper" class="img-thumbnail" src="./style.game/images/paper3.png" alt="paper">
             </li>
-            <li class="piece">
-                <img id="scissors" class="piece" src="./style.game/images/scissors.png" alt="scissors">
+            <li class="col col-4 text-center">
+                <label class="text-center border" for="">I'm Scissors</label>
+                <img id="scissors" class="img-thumbnail" src="./style.game/images/scissors.png" alt="scissors">
             </li>
         </ul>
     </div>
@@ -89,6 +94,7 @@
             <input class="text-center" id="playa02" type="text" placeholder="Name" />
         </div>
     </div>
+
     <div class="hidden">
         <label for="rock">rock</label>
         <input type="number" name="wallsCounter" id="wallsCounter" value="0" readonly />
@@ -97,52 +103,9 @@
         <label for="scissors">scissors</label>
         <input type="number" name="scissorsCounter" id="scissorsCounter" value="0" readonly />
     </div>
-    <div>
-        <div class="result-block">
-            <div style="display: grid;">
-                <p>Row 1 Result</p>
-                <label class="text-center" for="winner">Winner</label>
-                <input class="result-single" id="cell01" readonly />
-            </div>
-            <p class="cell-a" id="tcell01"></p>
-            <p class="cell-b" id="tcell02"></p>
-        </div>
-        <div class="result-block">
-            <div style="display: grid;">
-                <p>Row 2 Result</p>
-                <label class="text-center" for="winner">Winner</label>
-                <input class="result-single" id="cell02" readonly />
-            </div>
-            <p class="cell-a" id="tcell03"></p>
-            <p class="cell-b" id="tcell04"></p>
-        </div>
-        <div class="result-block">
-            <div style="display: grid;">
-                <p>Row 3 Result</p>
-                <label class="text-center" for="winner">Winner</label>
-                <input class="result-single" id="cell03" readonly />
-            </div>
-            <p class="cell-a" id="tcell05"></p>
-            <p class="cell-b" id="tcell06"></p>
-        </div>
-        <div class="result-block">
-            <div style="display: grid;">
-                <p>Row 4 Result</p>
-                <label class="text-center" for="winner">Winner</label>
-                <input class="result-single" id="cell04" readonly />
-            </div>
-            <p class="cell-a" id="tcell07"></p>
-            <p class="cell-b" id="tcell08"></p>
-        </div>
 
-        
-    </div>
-    <div>
-        <button id="zPlayBtn" class="btn btn-success">
-            Get Result
-        </button>
-        
-    </div>
+    
+    
     <section class="board-section">
         <div class="board-row" id="board-row01">
             <h3 id="playerOne">Player One</h3>
@@ -213,6 +176,68 @@
     <div class="row-hiders">
         <button id="hide-row-1" class="btn btn-warning">Hide/Show player 1 column</button>
         <button id="hide-row-2" class="btn btn-warning">Hide/Show player 2 column</button>
+    </div>
+
+    <div>
+        <button id="zPlayBtn" class="btn btn-success">
+            Get Result
+        </button>
+    
+    </div>
+
+    <div class="mt-5">
+        <div class="result-block">
+            <div class="row row-cols-1">
+                <div class="text-center">
+                    <label class="text-center" for="winner">Row 1 Winner</label>
+                    <input class="result-single" id="cell01" readonly />
+                </div>
+            </div>
+            <p class="cell-a" id="tcell01"></p>
+            <p class="cell-b" id="tcell02"></p>
+        </div>
+        <div class="result-block">
+            <div class="row row-cols-1">
+                
+                <div>
+                    <label class="text-center" for="winner">Row 2 Winner</label>
+                    <input class="result-single" id="cell02" readonly />
+                </div>
+            </div>
+            <p class="cell-a" id="tcell03"></p>
+            <p class="cell-b" id="tcell04"></p>
+        </div>
+        <div class="result-block">
+            <div class="row row-cols-1">
+                
+                <div>
+                    <label class="text-center" for="winner">Row 3 Winner</label>
+                    <input class="result-single" id="cell03" readonly />
+                </div>
+            </div>
+            <p class="cell-a" id="tcell05"></p>
+            <p class="cell-b" id="tcell06"></p>
+        </div>
+        <div class="result-block">
+            <div class="row row-cols-1">
+                
+               <div>
+                 <label class="text-center" for="winner">Row 4 Winner</label>
+                 <input class="result-single" id="cell04" readonly />
+               </div>
+            </div>
+            <p class="cell-a" id="tcell07"></p>
+            <p class="cell-b" id="tcell08"></p>
+        </div>
+
+        <div class="overall-result">
+            <div class="text-center col-4 mx-auto">
+                <label for="">Overall Winner</label>
+                <h4 id="overallWinner" class="bg-success text-bg-danger text-center">DRAW</h4>
+            </div>
+        </div>
+    
+    
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>

@@ -239,21 +239,21 @@ function ready()
     
         })
         
-        let aCells = document.getElementsByClassName("cell-a");
-        //console.log(aCells);
-        for (cell of aCells)
-        {
-            cell.style.display = "block";
-        }
-        //aCells.style.display = "block";
-        let bCells = document.querySelectorAll(".cell-b");
-        //console.log(bCells);
-        bCells.forEach(
-            (el) =>
-            {
-                el.style.display = "block";
-            }
-        )
+        // let aCells = document.getElementsByClassName("cell-a");
+        // //console.log(aCells);
+        // for (cell of aCells)
+        // {
+        //     cell.style.display = "block";
+        // }
+        // //aCells.style.display = "block";
+        // let bCells = document.querySelectorAll(".cell-b");
+        // //console.log(bCells);
+        // bCells.forEach(
+        //     (el) =>
+        //     {
+        //         el.style.display = "block";
+        //     }
+        // )
     
     }
     

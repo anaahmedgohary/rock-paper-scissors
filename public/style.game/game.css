@@ -32,11 +32,8 @@
 }
 
 .pieces-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: solid;
-  height: 4rem;
+  border: solid red;
+  min-height: fit;
 }
 
 .pieces-list {
@@ -48,7 +45,6 @@
   height: 100%;
   margin: auto;
   padding: 0;
-  border: solid;
 }
 .pieces-list .piece {
   margin: auto;
