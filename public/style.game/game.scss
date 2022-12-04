@@ -53,17 +53,23 @@
     }
 }
 
+.option-img{
+    max-width: 100px;
+    background-color: transparent;
+}
+
 .pieces-div {
     // display: grid;
     // align-items: center;
     // justify-content: center;
     border: solid red;
-    min-height: fit;
+    width: 100%;
     //pointer-events: none;
 }
 
 .pieces-list {
     @include flexCenter();
+    gap: 30px;
     //justify-content: space-evenly;
     list-style: none;
     //gap: 0%;
@@ -77,10 +83,10 @@
     .piece {
         margin: auto;
         //height: 100%;
-        min-width: 2rem;
-        max-width: 3rem;
-        min-height: 2rem;
-        max-height: 3rem;
+        min-width: 4rem;
+        max-width: 6rem;
+        min-height: 4rem;
+        max-height: 6rem;
         //max-width: 100%;
         cursor: pointer;
 
@@ -100,7 +106,8 @@
     }
 
     .waller {
-        //background-color: brown;
+        background-color: rgb(37, 196, 22);
+        border-radius: 8px;
         background-image: url(./images/granite.png);
         //background-size: contain;
         background-size: cover;
@@ -109,9 +116,9 @@
     }
 
     .staller {
-        //background-color: bisque;
-        border-radius: 50%;
-        border: solid;
+        background-color: rgb(15, 9, 1);
+       border-radius: 8px;
+        //border: solid;
         background-image: url(./images/paper3.png);
         background-position: center;
         background-size: contain;
@@ -119,7 +126,7 @@
     }
 
     .scissors {
-        background-color: orange;
+        background-color: rgb(255, 253, 248);
         border-radius: 8px;
         background-image: url(./images/scissors.png);
         background-position: center;
@@ -130,22 +137,24 @@
 
 .board-section {
     @include flexCenter();
-    border: solid;
-    display: flex;
-    //gap: 50px;
+    flex-wrap: wrap;
+    //border: solid;
+    gap: 40px;
     //height: 100vh;
 
     .board-row {
+        min-width: 350px;
         @include flexCenter();
         flex-direction: column;
+        gap: 50px;
         //justify-content: space-evenly;
         min-height: 3.8rem;
-        width: 50%;
+       // width: 50%;
 
         .board-col {
             height: 100%;
             width: 100%;
-            @include flexCenter();
+           // @include flexCenter();
         }
     }
 }
@@ -157,22 +166,22 @@
 
 .popup-msg {
 
-    @include flexCenter();
-    flex-direction: column;
-
-    img {
-        width: 30%;
-        background-color: white;
-    }
-
+     @include flexCenter();
+     flex-direction: column;
+    //@include gridCenter();
     color: orange;
     background-color: rgba(0, 0, 0, 0.699);
     padding: 0%;
     margin: 0%;
-    width: 110vw;
+    width: 100%;
     height: 120vh;
     position: fixed;
     z-index: 1;
+
+    img {
+        max-width: 300px;
+         background-color: white;
+    }
 
 }
 
@@ -221,10 +230,9 @@
 
 .players-div{
     @include flexCenter();
-    flex-direction: column;
+    //flex-direction: column;
     border: solid 20px;
     padding: 2%;
-    margin-block: 5%;
 }
 
 #zPlayBtn{
@@ -256,4 +264,17 @@
     justify-self: end;
     align-self: end;
     justify-self: right;
+}
+
+.ResultsSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    border: solid;
+}
+.ResultsSection{
+    width: 100%;
+
 }

@@ -107,7 +107,8 @@ async function overallWin()
     //     $("#overallWinner").text(vale)
     // }
     
-   player2Count > player1Count ? $("#overallWinner").text(`${playa02}` || "Player 2") : false;
+    player2Count > player1Count ? $("#overallWinner").text(`${playa02}` || "Player 2") : false;
+    player2Count == player1Count ? $("#overallWinner").text("Draw") : false;
     // if (player2Count > player1Count)
     // {
     //     let vale = `${playa02}` || "Player 2";

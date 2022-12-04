@@ -26,7 +26,7 @@
     <div class="popup-msg modal" id="about-rock">
         <!-- //content modal-content -->
         <img src="./style.game/images/granite.png" alt="rock" />
-        <ol class=" p-1">
+        <ol class="p-1 bg-dark fs-5 px-4">
             <li>I can beat Scissors.</li>
             <li>But Paper beats me.</li>
         </ol>
@@ -34,7 +34,7 @@
     </div>
     <div class="popup-msg modal" id="about-paper">
         <img src="./style.game/images/paper3.png" alt="paper image" />
-        <ol class=" p-1">
+        <ol class="p-1 bg-dark fs-5 px-4">
             <li>I can beat Rock</li>
             <li>But Scissors beats me</li>
         </ol>
@@ -42,7 +42,7 @@
     </div>
     <div class="popup-msg modal" id="about-scissors">
         <img src="./style.game/images/scissors.png" alt="scissors image" />
-        <ol class=" p-1">
+        <ol class=" p-1 bg-dark fs-5 px-4">
             <li>I can beat Paper</li>
             <li>But Rock beats me</li>
         </ol>
@@ -68,30 +68,33 @@
         <ul class="row list-unstyled">
             <li class="col col-4 text-center">
                 <label class="text-center border" for="">I'm Rock</label>
-                <img id="rock" class="img-thumbnail" src="./style.game/images/granite.png" alt="rock">
+                <img role="button" id="rock" class="img-thumbnail option-img" src="./style.game/images/granite.png" alt="rock">
             </li>
             <li class="col col-4 text-center">
                 <label class="text-center border" for="">I'm Paper</label>
-                <img id="paper" class="img-thumbnail" src="./style.game/images/paper3.png" alt="paper">
+                <img role="button" id="paper" class="img-thumbnail option-img" src="./style.game/images/paper3.png" alt="paper">
             </li>
             <li class="col col-4 text-center">
                 <label class="text-center border" for="">I'm Scissors</label>
-                <img id="scissors" class="img-thumbnail" src="./style.game/images/scissors.png" alt="scissors">
+                <img role="button" id="scissors" class="img-thumbnail option-img" src="./style.game/images/scissors.png" alt="scissors">
             </li>
         </ul>
     </div>
-    <div class="players-div mt-4 text-center border border-success border-4 d-grid gap-3">
+    <div class="my-4 text-center border">
         <div>
             <h5>Players Names</h5>
         </div>
-        <div class="text-center">
-            <label class="bg-warning col-3">player 1</label>
-            <input class="text-center" id="playa01" type="text" placeholder="Name" />
-            
-        </div>
-        <div class="text-center">
-            <label class="bg-info col-3">player 2</label>
-            <input class="text-center" id="playa02" type="text" placeholder="Name" />
+
+        <div class="players-div flex-wrap gap-3">
+            <div class="text-center">
+                <label class="bg-warning col-3">player 1</label>
+                <input class="text-center" id="playa01" type="text" placeholder="Name" />
+                
+            </div>
+            <div class="text-center">
+                <label class="bg-info col-3">player 2</label>
+                <input class="text-center" id="playa02" type="text" placeholder="Name" />
+            </div>
         </div>
     </div>
 
@@ -185,53 +188,55 @@
     
     </div>
 
-    <div class="mt-5">
-        <div class="result-block">
-            <div class="row row-cols-1">
-                <div class="text-center">
-                    <label class="text-center" for="winner">Row 1 Winner</label>
-                    <input class="result-single" id="cell01" readonly />
+    <div class="mt-5 ResultsSection">
+        <div>
+            <div class="result-block">
+                <div class="row row-cols-1">
+                    <div class="text-center">
+                        <label class="text-center" for="winner">Row 1 Winner</label>
+                        <input class="result-single" id="cell01" readonly />
+                    </div>
                 </div>
+                <p class="cell-a" id="tcell01"></p>
+                <p class="cell-b" id="tcell02"></p>
             </div>
-            <p class="cell-a" id="tcell01"></p>
-            <p class="cell-b" id="tcell02"></p>
-        </div>
-        <div class="result-block">
-            <div class="row row-cols-1">
-                
-                <div>
-                    <label class="text-center" for="winner">Row 2 Winner</label>
-                    <input class="result-single" id="cell02" readonly />
+            <div class="result-block">
+                <div class="row row-cols-1">
+                    
+                    <div>
+                        <label class="text-center" for="winner">Row 2 Winner</label>
+                        <input class="result-single" id="cell02" readonly />
+                    </div>
                 </div>
+                <p class="cell-a" id="tcell03"></p>
+                <p class="cell-b" id="tcell04"></p>
             </div>
-            <p class="cell-a" id="tcell03"></p>
-            <p class="cell-b" id="tcell04"></p>
-        </div>
-        <div class="result-block">
-            <div class="row row-cols-1">
-                
-                <div>
-                    <label class="text-center" for="winner">Row 3 Winner</label>
-                    <input class="result-single" id="cell03" readonly />
+            <div class="result-block">
+                <div class="row row-cols-1">
+                    
+                    <div>
+                        <label class="text-center" for="winner">Row 3 Winner</label>
+                        <input class="result-single" id="cell03" readonly />
+                    </div>
                 </div>
+                <p class="cell-a" id="tcell05"></p>
+                <p class="cell-b" id="tcell06"></p>
             </div>
-            <p class="cell-a" id="tcell05"></p>
-            <p class="cell-b" id="tcell06"></p>
-        </div>
-        <div class="result-block">
-            <div class="row row-cols-1">
-                
-               <div>
-                 <label class="text-center" for="winner">Row 4 Winner</label>
-                 <input class="result-single" id="cell04" readonly />
-               </div>
+            <div class="result-block">
+                <div class="row row-cols-1">
+                    
+                   <div>
+                     <label class="text-center" for="winner">Row 4 Winner</label>
+                     <input class="result-single" id="cell04" readonly />
+                   </div>
+                </div>
+                <p class="cell-a" id="tcell07"></p>
+                <p class="cell-b" id="tcell08"></p>
             </div>
-            <p class="cell-a" id="tcell07"></p>
-            <p class="cell-b" id="tcell08"></p>
         </div>
 
         <div class="overall-result">
-            <div class="text-center col-4 mx-auto">
+            <div class="text-center">
                 <label for="">Overall Winner</label>
                 <h4 id="overallWinner" class="bg-success text-bg-danger text-center">DRAW</h4>
             </div>
