@@ -25,6 +25,7 @@ lerna-debug.log*
 node_modules/
 src/
 ignoresrc/
+old_node_modules/
 jspm_packages/
 
 # Optional npm cache directory
