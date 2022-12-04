@@ -23,6 +23,7 @@ lerna-debug.log*
 
 # Dependency directories
 node_modules/
+src/
 jspm_packages/
 
 # Optional npm cache directory
